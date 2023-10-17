@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/design_default_color_background">
@@ -63,16 +62,24 @@
         android:textColor="@android:color/white"
         android:background="@color/material_dynamic_secondary0"/>
 
-
     <TextView
-        android:id="@+id/textViewSignUp"
+        android:id="@+id/textViewForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonLogin"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
+        android:text="Forgot password"
+        android:textColor="@color/material_dynamic_primary20"/>
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewForgotPassword"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
         android:text="Sign Up"
-        android:textColor="@color/black"
-        tools:ignore="ExtraText" />
+        android:textColor="@color/black"/>
 
 </RelativeLayout>
