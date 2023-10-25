@@ -127,5 +127,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageView mapView = findViewById(R.id.map);
+
+        mapView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xử lý sự kiện khi nhấp vào biểu tượng shoppingCartIcon (chuyển đến trang Cart)
+                Intent intent = new Intent(MainActivity.this, ThongTinActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
