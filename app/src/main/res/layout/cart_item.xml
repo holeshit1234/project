@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/cartItemImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/cartItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cartItemImage"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/cartItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cartItemImage"
+        android:layout_below="@id/cartItemName"
+        android:textSize="16sp" />
+
+
+   <LinearLayout
+       android:id="@+id/containerQuantity"
+       android:layout_below="@id/cartItemPrice"
+       android:layout_toRightOf="@id/cartItemImage"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/quantityLabel"
+           android:layout_toLeftOf="@id/cartItemQuantity"
+           android:layout_centerVertical="true"
+           android:text="Quantity: "
+           android:textSize="16sp"/>
+       <TextView
+           android:id="@+id/cartItemQuantity"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@id/cartItemImage"
+           android:layout_below="@id/cartItemPrice"
+           android:textSize="16sp"
+
+           />
+
+   </LinearLayout>
+
+</RelativeLayout>

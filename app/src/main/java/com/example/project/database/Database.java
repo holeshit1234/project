@@ -1,5 +1,6 @@
 package com.example.project.database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -32,4 +33,50 @@ public class Database extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1){
 
     }
+
+    public boolean insertToCart(String name, double price, int quantity, int image) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("name", name);
+        values.put("price", price);
+        values.put("quantity", quantity);
+        values.put("image", image);
+
+        long result = db.insert("Cart", null, values);
+        db.close();
+
+        return result != -1; // Check if the insert was successful
+    }
+
+    public boolean checkProductExist(String name){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM Cart WHERE Name = ?";
+        String[] selectionArgs = {name};
+        Cursor cursor = db.rawQuery(query, selectionArgs);
+        boolean exists = (cursor.getCount() > 0);
+        cursor.close();
+        return exists;
+    }
+
+
+    public boolean updateCartItemQuantity(String name, int newQuantity, double newPrice) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("quantity", newQuantity);
+        values.put("price", newPrice);
+
+        String whereClause = "name = ?";
+        String[] whereArgs = {name};
+
+        int rowsUpdated = db.update("Cart", values, whereClause, whereArgs);
+        db.close();
+
+        return rowsUpdated > 0;
+    }
+
+
+
+
 }
