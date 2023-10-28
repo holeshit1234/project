@@ -49,8 +49,8 @@
             <ListView
                 android:id="@+id/cartListView"
                 android:layout_width="match_parent"
-                android:layout_height="700dp"
-                android:background="#352C2C"
+                android:layout_height="500dp"
+                android:background="@drawable/cart"
                 />
 
             <Button
@@ -63,7 +63,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/black"/>
         </LinearLayout>
 
 

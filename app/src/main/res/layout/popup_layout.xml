@@ -5,27 +5,44 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fill profile to pay"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        >
+
+    </TextView>
+
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name" />
+        android:hint="Name"
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/editTextIDCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ID Card" />
+        android:hint="ID Card"
+        android:textSize="20sp"/>
 
     <DatePicker
         android:id="@+id/datePickerPopup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="333dp"
+        />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="200.000$"></TextView>
+        android:text="200.000$"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        ></TextView>
 
 </LinearLayout>

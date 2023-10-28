@@ -4,31 +4,57 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--Hóa đơn thanh toán--"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                >
+
+            </TextView>
+
+
             <TextView
                 android:id="@+id/usernameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name" />
+                android:hint="Name"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                />
 
             <TextView
                 android:id="@+id/idMasterCardTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ID Card" />
+                android:hint="ID Card"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/dateBillTextView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/priceTotalTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="200.000$"></TextView>
+                android:text="200.000$"
+
+                android:textStyle="bold"
+                android:textSize="23sp"></TextView>
             <Button
                 android:id="@+id/buttonOK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="OK" />
+                android:text="Hoàn tất"
+                android:backgroundTint="@color/black"
+                />
         </LinearLayout>

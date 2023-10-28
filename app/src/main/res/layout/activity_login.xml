@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_background">
+    >
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -60,7 +60,8 @@
         android:layout_marginEnd="16dp"
         android:text="Login"
         android:textColor="@android:color/white"
-        android:background="@color/material_dynamic_secondary0"/>
+
+        android:backgroundTint="@color/black"/>
 
     <TextView
         android:id="@+id/textViewForgotPassword"

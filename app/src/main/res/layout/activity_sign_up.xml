@@ -70,7 +70,7 @@
         android:layout_marginEnd="16dp"
         android:text="Sign up"
         android:textColor="@android:color/white"
-        android:background="@color/black"/>
+        android:backgroundTint="@color/black"/>
 
     <TextView
         android:id="@+id/textViewLogin"
@@ -79,7 +79,7 @@
         android:layout_below="@id/buttonSignUp"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
-        android:text="Sign  "
+        android:text="SignIn"
         android:textColor="@color/black"/>
 
 </RelativeLayout>

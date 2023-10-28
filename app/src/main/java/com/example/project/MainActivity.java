@@ -74,13 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         //inset
-        database.QueryData("Insert into Clothes values(null, 'hello', 'quanaadasdadasdsadoao', " + R.drawable.aothunomachi +  ", 12, 22.2)");
-        database.QueryData("Insert into Clothes values(null, 'Alibaba', 'quanadasdadadaoao', " + R.drawable.nhanvienfsoft +  ", 222, 44.0)");
-        database.QueryData("Insert into Clothes values(null, 'Dữ z sao', 'quanaádadasdsadoao', " + R.drawable.chinsu +  ", 11, 10.0)");
-        database.QueryData("Insert into Clothes values(null, 'Adidaphat', 'quanaádasdadasdoao', " + R.drawable.haohao1 +  ", 1, 44.4)");
-        database.QueryData("Insert into Clothes values(null, 'nhanvienfsoft', 'quasadsadadsadadanaoao', " + R.drawable.haohao +  ", 40, 20.0)");
-        database.QueryData("Insert into Clothes values(null, 'duudud', 'quanasadasdasdoao', " + R.drawable.haohao2 +  ", 22, 33.33)");
-        database.QueryData("Insert into Clothes values(null, 'shiba', 'quanaádasdsadoao', " + R.drawable.omachi +  ", 25, 50.0)");
+        database.QueryData("Insert into Clothes values(null, 'Áo bò hầm Omachi', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', " + R.drawable.aothunomachi +  ", 12, 22.2)");
+        database.QueryData("Insert into Clothes values(null, 'Áo chinsu', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', " + R.drawable.chinsu +  ", 11, 10.0)");
+        database.QueryData("Insert into Clothes values(null, 'Áo hảo hảo vàng', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', " + R.drawable.haohao1 +  ", 1, 44.4)");
+        database.QueryData("Insert into Clothes values(null, 'Áo hảo hảo hồng', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', " + R.drawable.haohao +  ", 40, 20.0)");
+        database.QueryData("Insert into Clothes values(null, 'Áo hảo hảo hồng 2', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', " + R.drawable.haohao2 +  ", 22, 33.33)");
+        database.QueryData("Insert into Clothes values(null, 'Áo omachi xanh', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', " + R.drawable.omachi +  ", 25, 50.0)");
         //
 
         String query = "SELECT * FROM Clothes ";

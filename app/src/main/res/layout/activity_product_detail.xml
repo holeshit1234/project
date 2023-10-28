@@ -51,7 +51,7 @@
             <ImageView
                 android:id="@+id/imageClothes"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="300dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:scaleType="centerCrop"
@@ -63,7 +63,9 @@
                 android:layout_height="wrap_content"
                 android:text="Product Name"
                 android:textSize="25sp"
-            android:layout_marginBottom="10dp" />
+                android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+                android:textStyle="bold"/>
 
             <!-- Product Description -->
             <TextView
@@ -71,20 +73,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Product Description"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/quantityClothes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="14sp" />
+                android:textSize="16sp"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/priceClothes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="20"
-                android:textSize="14sp" />
+                android:textSize="25sp"
+                android:textStyle="italic"/>
 
             <!-- Add to  Button -->
             <Button
@@ -92,13 +96,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Add to Cart"
-                android:layout_marginTop="20dp"/>
-            <Button
-                android:id="@+id/btnBack"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Back to home"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black"/>
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
