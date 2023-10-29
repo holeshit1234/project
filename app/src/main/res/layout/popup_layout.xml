@@ -27,7 +27,7 @@
         android:id="@+id/editTextIDCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ID Card"
+        android:hint="Address"
         android:textSize="20sp"/>
 
     <DatePicker

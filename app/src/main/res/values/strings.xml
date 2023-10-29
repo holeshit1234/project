@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">project</string>
     <string name="title_activity_thong_tin">ThongTinActivity</string>
+    <string name="channel_name">Channel 1</string>
+    <string name="channel_description">Channel 1</string>
 </resources>

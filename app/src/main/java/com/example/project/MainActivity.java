@@ -1,10 +1,13 @@
 package com.example.project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.content.Intent;
 import android.database.Cursor;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,15 +27,12 @@ public class MainActivity extends AppCompatActivity {
     ListView listClothes;
     ArrayList<Clothes> arrayClothes;
     ClothesAdapter adapter;
-    private Button btOut;
-
     Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_product_clothes);
-        btOut = (Button) findViewById(R.id.button);
 
         listClothes = (ListView) findViewById(R.id.listClothes);
         arrayClothes = new ArrayList<>();
@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
         database.QueryData("CREATE TABLE IF NOT EXISTS Cart (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "Name NVARCHAR(200), Price REAL,  Quantity INTEGER, Image NVARCHAR(200) ) ");
 
-        database.QueryData("CREATE TABLE IF NOT EXISTS Orders (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "PriceTotal REAL, DateBill NVARCHAR(200), NameUser NVARCHAR(200), IdMasterCard NVARCHAR(200)  ) ");
+
 
 // Thực hiện truy vấn để kiểm tra dữ liệu trong bảng "Cart"
         String cartQuery = "SELECT * FROM Cart";
@@ -95,27 +94,7 @@ public class MainActivity extends AppCompatActivity {
         }
         adapter.notifyDataSetChanged();
 
-        btOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MainActivity.this,SignInActivity.class);
-                startActivity(intent);
-                //finish();
-            }
-        });
-
-
-//        ImageView homeListClothes = findViewById(R.id.home);
         ImageView cartClothes = findViewById(R.id.cart);
-
-//        homeListClothes.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Xử lý sự kiện khi nhấp vào biểu tượng imageClothes (quay lại trang trước)
-//                onBackPressed(); // Quay lại trang trước
-//            }
-//        });
 
         cartClothes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,5 +116,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.logout, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menuExit) {
+            Intent intent = new Intent(MainActivity.this,SignInActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
